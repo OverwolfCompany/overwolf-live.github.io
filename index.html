@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Drawing module</title>
+<head>
+<script src="jquery.min.js"></script>
+<script src="fabric.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="container">
+          <div class="row">
+                <div class="col-md-12">
+					<br /><h2 style="text-align:center;">Drawing module v0.25</h2>
+					<h5 style="text-align:center;">by Overwolf</h5><br />
+				</div>	
+		  </div>
+		  <div class="row">
+                <div class="col-md-6">
+                			<img id="myImg" src="white.png" width="500" height="350" style="border:0px solid #aaa " class="semi">			  
+							<canvas id="c" width="500" height="350" style="border:1px solid #f3f3f3	"></canvas>
+									
+				</div>
+
+				<div class="col-md-6">
+					  <button id="drawing-mode" class="btn btn-info">Скрыть панель</button>
+					  <button id="clear-canvas" class="btn btn-info">Очистить холст</button><br> 
+					  
+
+					  <div id="drawing-mode-options">
+						<label for="drawing-mode-selector">Инструмент:</label>
+						<select id="drawing-mode-selector">
+						  <option>кисть</option>
+						  <option>овал</option>
+						  <option>спрей</option>
+						  <option>паттерн</option>
+						  <option>горизонтальная линия</option>
+						  <option>вертикальная линия</option>
+						  <option>квадрат</option>
+						  <option>бриллиант</option>
+						  <option>ластик</option>
+						</select><br>
+
+						<label for="drawing-line-width">Толщина:</label>
+						<span class="info">30</span><input type="range" value="30" min="0" max="150" id="drawing-line-width"><br>
+
+						<label for="drawing-color">Цвет:</label>
+						<input type="color" value="#f3f3f3" id="drawing-color"><br>
+
+						<label for="drawing-shadow-color">Тень:</label>
+						<input type="color" value="#f3f3f3" id="drawing-shadow-color"><br>
+
+						<label for="drawing-shadow-width">Толщина тени:</label>
+						<span class="info">0</span><input type="range" value="0" min="0" max="50" id="drawing-shadow-width"><br>
+
+						<label for="drawing-shadow-offset">Смещение тени:</label>
+						<span class="info">0</span><input type="range" value="0" min="0" max="50" id="drawing-shadow-offset"><br>
+					  </div><br>
+					  <button id="b" class="btn btn-info">Сохранить</button>
+					  <input type='file' class="btn btn-info" />
+					   			<br><br>
+					   			<audio id="myAudio" src="Peter_Rudenko.mp3" preload="auto"></audio>
+								<a onClick="togglePlay()" class="btn btn-info">Немного музыки для релакса</a>
+				</div>
+		</div>
+</div>
+<script src="picture.js"></script>
+<script src="audio.js"></script> 
+</body>
+</html>
